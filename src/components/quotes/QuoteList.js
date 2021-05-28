@@ -26,6 +26,7 @@ const QuoteList = (props) => {
       pathname: location.pathname,
       search: `?sort=${(isSortingAscending ? 'desc' : 'asc')}`
     })
+    // alternate way of achieving same query params
     // history.push(`${location.pathname}?sort=${(isSortingAscending ? 'desc' : 'asc')}`)
   }
   const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
@@ -44,8 +45,6 @@ const QuoteList = (props) => {
             text={quote.text}
           />
         ))}
-
-        <li>Quotes go here</li>
       </ul>
     </Fragment>
   );
